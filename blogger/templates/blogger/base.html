@@ -13,21 +13,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
  
-
         <link rel="stylesheet" type='text/css' href="{% static 'blogger/css/main.css' %}">
 
-
         {% if title %}
-            <title>Blogger - {{ title }}</title>
-        {% else %}
-            <title>Blogger</title>
+            <title>NewsNet - {{ title }}</title>
+        {% else %} 
+            <title>NewsNet</title>
         {% endif %}
     </head>
     <body> <!-- Having trouble with this header; assuming its class problem with newer version of bootstrap-->
         <header class="header">
             <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
                 <div class="container">
-                    <a class="navbar-brand mr-4" href="{% url 'blogger' %}">Django Blog</a>
+                    <a class="navbar-brand mr-4" href="{% url 'blogger' %}">NewsNet Admin</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -57,7 +55,7 @@
             <div class="row">
                 <div class="col-md-7">
                 {% if messages %}
-                    {% for message in messages %}
+                    {% for message in f %}
                         <div class="alert alert-success">
                             {{ message }}
                         </div>
@@ -70,11 +68,11 @@
                     <h3>Our Sidebar</h3>
                     <p class='text-muted'>You can put any information here you'd like.
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-light">Latest Posts</li>
+                        <li class="list-group-item list-group-item-light">Latest Article</li>
                         <li class="list-group-item list-group-item-light">Announcements</li>
                         <li class="list-group-item list-group-item-light">Calendars</li>
                         <li class="list-group-item list-group-item-light">etc</li>
-                    </ul>
+                    </ul> 
                     </p>
                 </div>
               </div>

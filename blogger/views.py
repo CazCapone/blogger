@@ -36,7 +36,7 @@ class UserPostListView(ListView):
         return Post.objects.filter(author=user).order_by('-date_posted')
 
 class PostDetailView(DetailView):
-    model = Post
+    model = Post 
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post

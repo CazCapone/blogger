@@ -133,14 +133,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 #Added for crispy forms to use bootstrap 4
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4' 
 #Redirects after login
 LOGIN_REDIRECT_URL = 'blogger'
 #Changes auth login page 
 LOGIN_URL = 'login'
 #Where to save files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-print(BASE_DIR)
 MEDIA_URL = '/media/' 
 
 #Email server
